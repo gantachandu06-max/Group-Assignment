@@ -55,7 +55,7 @@ The repository includes a Render Blueprint at [`render.yaml`](../render.yaml). T
 
 The Blueprint uses the `TeaTime Vending` folder as its service root and deploys on Render's free plan. SQLite data is stored on the service's local filesystem, which is ephemeral on the free plan; database changes can be lost when the service restarts or redeploys. The app creates and seeds its database at startup.
 
-The Render build compiles the SQLite native module from source so it matches Render's Linux system libraries.
+SQLite is pinned to version 5.1.7 to use a Linux prebuilt binary compatible with Render's system libraries. Use `npm ci` as the Render build command; do not force a source build.
 
 ## Installation and Setup
 

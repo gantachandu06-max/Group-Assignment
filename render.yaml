@@ -4,6 +4,6 @@ services:
     runtime: node
     plan: free
     rootDir: TeaTime Vending
-    buildCommand: npm ci --build-from-source
+    buildCommand: npm ci
     startCommand: npm start
     healthCheckPath: /
