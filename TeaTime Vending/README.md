@@ -8,7 +8,7 @@ The application provides REST API endpoints to perform CRUD operations on machin
 
 ## Live API
 
-**Render Deployment:** Create the service using the Blueprint instructions below, then add its URL here.
+**Render Deployment:** https://group-assignment-2-knvb.onrender.com
 
 **GitHub Repository:** https://github.com/gantachandu06-max/Group-Assignment
 
@@ -51,7 +51,7 @@ The repository includes a Render Blueprint at [`render.yaml`](../render.yaml). T
 1. Sign in to [Render](https://dashboard.render.com) and choose **New → Blueprint**.
 2. Connect GitHub and select `gantachandu06-max/Group-Assignment`.
 3. Review the `teatime-vending-api` service and choose **Apply** to build and deploy it.
-4. When the deployment succeeds, copy the service URL into the **Render Deployment** field above.
+4. After deployment succeeds, open the service URL; the home endpoint should show the API welcome message.
 
 The Blueprint uses the `TeaTime Vending` folder as its service root and deploys on Render's free plan. SQLite data is stored on the service's local filesystem, which is ephemeral on the free plan; database changes can be lost when the service restarts or redeploys. The app creates and seeds its database at startup.
 
