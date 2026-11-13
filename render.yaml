@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: teatime-vending-api
+    runtime: node
+    plan: free
+    rootDir: TeaTime Vending
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /

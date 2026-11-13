@@ -8,9 +8,9 @@ The application provides REST API endpoints to perform CRUD operations on machin
 
 ## Live API
 
-**Render Deployment:** 
+**Render Deployment:** Create the service using the Blueprint instructions below, then add its URL here.
 
-**GitHub Repository:** 
+**GitHub Repository:** https://github.com/gantachandu06-max/Group-Assignment
 
 ## Technologies Used
 
@@ -24,51 +24,49 @@ The application provides REST API endpoints to perform CRUD operations on machin
 ## Project Structure
 
 ```text
-LG-14-TeaTime-Vending/
-│
-├── controllers/
-│
-├── database/
-│   ├── db.js
-│   └── teatime.db
-│
-├── routes/
-│   ├── assignmentRoutes.js
-│   ├── auditRoutes.js
-│   ├── machineRoutes.js
-│   └── operatorRoutes.js
-│
-├── screenshots/
-│   ├── add_machine.png
-│   ├── delete_machine.png
-│   ├── get_all_machines.png
-│   ├── get_all_operators.png
-│   ├── get_assignments.png
-│   ├── get_operator_by_id.png
-│   ├── latest_audit_records.png
-│   ├── search_machine_by_product.png
-│   └── update_machine.png
-│
-├── .gitignore
-├── package.json
-├── package-lock.json
-├── README.md
-├── server.js
-└── teatime-requests.http
+Group-Assignment/
+├── render.yaml
+└── TeaTime Vending/
+    ├── controllers/
+    ├── database/
+    │   └── db.js
+    ├── routes/
+    │   ├── assignmentRoutes.js
+    │   ├── auditRoutes.js
+    │   ├── machineRoutes.js
+    │   └── operatorRoutes.js
+    ├── screenshots/
+    ├── .gitignore
+    ├── package.json
+    ├── package-lock.json
+    ├── README.md
+    ├── server.js
+    └── teatime-requests.http
 ```
+
+## Deploy to Render
+
+The repository includes a Render Blueprint at [`render.yaml`](../render.yaml). To create the web service:
+
+1. Sign in to [Render](https://dashboard.render.com) and choose **New → Blueprint**.
+2. Connect GitHub and select `gantachandu06-max/Group-Assignment`.
+3. Review the `teatime-vending-api` service and choose **Apply** to build and deploy it.
+4. When the deployment succeeds, copy the service URL into the **Render Deployment** field above.
+
+The Blueprint uses the `TeaTime Vending` folder as its service root and deploys on Render's free plan. SQLite data is stored on the service's local filesystem, which is ephemeral on the free plan; database changes can be lost when the service restarts or redeploys. The app creates and seeds its database at startup.
 
 ## Installation and Setup
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/kondasusvitha13-debug/Lab1-Express-Server.git
+git clone https://github.com/gantachandu06-max/Group-Assignment.git
 ```
 
 ### 2. Navigate to the Project Folder
 
 ```bash
-cd Backend-Development-Labs/LG-14-TeaTime-Vending
+cd "Group-Assignment/TeaTime Vending"
 ```
 
 ### 3. Install Dependencies
